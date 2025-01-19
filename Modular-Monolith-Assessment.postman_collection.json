@@ -1,0 +1,223 @@
+{
+	"info": {
+		"_postman_id": "36125247-c79f-440c-af66-5614142cf5fa",
+		"name": "Modular-Monolith-Assessment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10976450"
+	},
+	"item": [
+		{
+			"name": "getAllDoctors",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/doctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createDoctor",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctorName\": \"Abdullah Ali Mohammed\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/doctor",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"doctor"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAvailableSlots",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/slot/available",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"slot",
+						"available"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createSlot",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctorId\": \"ad2db8e8-58f1-4496-a6c8-f78fdf424b4e\",\r\n    \"time\": \"2025-01-01T22:10:04\",\r\n    \"cost\": 200.0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/slot",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"slot"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createPatient",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patientName\": \"Abbas\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/patient",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"patient"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getUpcomingAppointmentsByDoctorId",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/appointment-management/upcoming/24deea7f-57ef-42f4-b980-c8a14615a355",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointment-management",
+						"upcoming",
+						"24deea7f-57ef-42f4-b980-c8a14615a355"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createAppointment",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"slotId\": \"ef39503c-01fc-44b5-8892-6ba0a6a8ae9f\",\r\n    \"patientId\": \"7e040d17-992b-4b61-87a7-579d88f2cc46\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/appointment",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointment"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "changeAppointmentStatus",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"appointmentId\": \"570703f5-e045-4643-85b7-4bae9347bea3\",\r\n    \"status\": \"CANCELED\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/appointment-management/status",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"appointment-management",
+						"status"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
